@@ -20,7 +20,7 @@
 1. Use Koin to Inject WeatherRepository (it will be easy to  use it because library used Koin DI for implementation)
 2. Add `libarymodule` in your Project module
 
-Ex :` val appModule = module {
+  ` val appModule = module {
    viewModel { WeatherDetailViewModel(get()) }
    viewModel { WelcomeScreenViewModel() }
    }.plus(libraryModule)`
@@ -29,7 +29,7 @@ Ex :` val appModule = module {
 1. Use coroutine [here](https://developer.android.com/kotlin/coroutines) to use the weather API 
 2. call `getWeatherInformation` by `weatherRepository`
 
-Ex :   `fun getWeatherInfo(latitude : String , longitude : String
+  `fun getWeatherInfo(latitude : String , longitude : String
    ) = viewModelScope.launch {
    _weatherResponse.value = weatherRepository.getWeatherInformation(latitude,longitude,"hourly,minutely","ae1c4977a943a50eaa7da25e6258d8b2","Metric","4")
    }`
@@ -40,3 +40,18 @@ Ex :   `fun getWeatherInfo(latitude : String , longitude : String
 #### Unit testing of logics and functionality
 All functions has been tested by JUnit in library 
 
+
+### Step 1. Add the JitPack repository to your build file
+
+`allprojects {
+repositories {
+...
+maven { url 'https://jitpack.io' }
+}
+}`
+
+#### Step 2. Add the dependency
+
+`dependencies {
+implementation 'com.github.Rahulkumarp:Weather_Report:1.0.0'
+}`
