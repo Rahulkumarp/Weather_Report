@@ -40,18 +40,20 @@
 #### Unit testing of logics and functionality
 All functions has been tested by JUnit in library 
 
+## To use libary
 
 ### Step 1. Add the JitPack repository to your build file
 
-`allprojects {
+```allprojects {
 repositories {
 ...
 maven { url 'https://jitpack.io' }
 }
-}`
+}```
 
-#### Step 2. Add the dependency
+### Step 2. Add the dependency
 
-`dependencies {
+```dependencies {
 implementation 'com.github.Rahulkumarp:Weather_Report:1.0.0'
-}`
+}```
+
