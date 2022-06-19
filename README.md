@@ -20,23 +20,23 @@
 1. Use Koin to Inject WeatherRepository (it will be easy to  use it because library used Koin DI for implementation)
 2. Add `libarymodule` in your Project module
 
-` val appModule = module {
-viewModel { WeatherDetailViewModel(get()) }
-viewModel { WelcomeScreenViewModel() }
-}.plus(libraryModule)`
+  ` val appModule = module {
+   viewModel { WeatherDetailViewModel(get()) }
+   viewModel { WelcomeScreenViewModel() }
+   }.plus(libraryModule)`
 
 ### Step 5: For API calling
-1. Use coroutine [here](https://developer.android.com/kotlin/coroutines) to use the weather API
+1. Use coroutine [here](https://developer.android.com/kotlin/coroutines) to use the weather API 
 2. call `getWeatherInformation` by `weatherRepository`
 
-`weatherRepository.getWeatherInformation(latitude,longitude,"hourly,minutely","API key","Metric","4")
-`
+  `weatherRepository.getWeatherInformation(latitude,longitude,"hourly,minutely","API key","Metric","4")
+   `
 
 ### Step 6: Happy Coding!
 
 
 #### Unit testing of logics and functionality
-All functions has been tested by JUnit in library
+All functions has been tested by JUnit in library 
 
 ## To use libary
 
